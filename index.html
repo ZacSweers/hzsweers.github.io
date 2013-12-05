@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Henri Sweers by pandanomic</title>
+    <title>Henri Sweers</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
         <h1>Henri Sweers</h1>
-        <h2>pandanomic</h2>
+        <h2>I write code.</h2>
         <a href="https://github.com/pandanomic" class="button"><small>Follow me on</small>GitHub</a>
       </div>
     </header>
@@ -28,44 +28,83 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h3> <a name="aboutme" class="anchor" href="#aboutme"><span class="octicon octicon-link"></span></a>About Me</h3>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+    <p>
+        <img src="http://pandanomic.github.io/images/me.jpg" alt="Me" width="150" height="150">
+    </p>
+    <ul>
+        <li>Name: Henri Sweers</li>
+        <li>Education: I'm a senior Computer Science B.S. major at the University of Texas at Austin. I will be graduating in May 2014.</li>
+        <li>Email: <a href="mailto:hzsweers@utexas.edu">hzsweers@utexas.edu</a></li>
+        <li><a href="https://github.com/pandanomic">GitHub</a></li>
+        <li><a href="http://www.linkedin.com/profile/view?id=126301011">LinkedIn</a></li>
+        <li><a href="http://www.twitter.com/pandanomic">Twitter</a></li>
+        <li><a href="http://pandanomic.github.io/Resume.pdf">Resume</a></li>
+    </ul>
+
+<p>I enjoy many kinds of programming and development, with an interest in mobile app development. Below is some of my past and current work</p>
+
+<h3>
+<a name="HoloGoogl" class="anchor" href="#HoloGoogl"><span class="octicon octicon-link"></span></a>Holo Goo.gl</h3>
+
+<p>This was my first major venture into Android app development. I figured it'd be a good start, due to its simplicity, while being good practice for a multitude of concepts. It's admittedly an unorganized jumble of code at the moment, as it was more of an organically grown project, but I plan on doing a major rewrite of it over the winter break and releasing it on the play store.</p>
+
+<p>Link: <a href="https://github.com/pandanomic/Holo-Goo.gl">https://github.com/pandanomic/Holo-Goo.gl</a></p>
+
+<h3>
+<a name="WCDB" class="anchor" href="#WCDB"><span class="octicon octicon-link"></span></a>World Crises DB</h3>
+
+<p>This was our major project for the Fall 2013 Software Engineering course, under Dr. Glenn Downing. The repository itself is private and closed-source, but essentially it was a project in full stack. We had a group of 6, and built a full database-backed website powered by Django and hosted on Heroku. I worked mainly on the API layer and tests for it, as well as the unique API call we made in the form of a game.</p>
+
+<p>To access the API, you can use a number of different requests. Below are a few basic call types:</p>
+
+<pre><code># Get list of crises
+GET
+http://goldenretrievers.herokuapp.com/api/crises
+
+# Get info for a particular crisis
+GET
+http://goldenretrievers.herokuapp.com/api/crises/{id}
+
+# Works for "organizations" and "people" as well
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Link: <a href="goldenretrievers.herokuapp.com">https://goldenretrievers.herokuapp.com</a></p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="FlashNotifier" class="anchor" href="#flashnotifier"><span class="octicon octicon-link"></span></a>FlashNotifier</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>This is the Android app I worked on in a group project for my Fall 2013 Mobile Computing course, under Professor Mike Scott. The basic premise of the app is to offer support for using the camera LED light as a 3rd option for broadcasting notifications (on top of vibration and ringtones). I also implemented an internal API that other apps could access to use our service, with built-in access control for the user. I plan on continuing work on it after the class and hopefully finalizing it for release on the play store over the winter holiday. A sample of our API is included below (one of these days I'll fix it and add syntax highlighting):</p>
+
+<pre><code class="java"># Make an API request like this:
+Intent i = new Intent("com.leepapesweers.flashnotifier.API");
+
+// Put flash pattern in request
+// OPTIONAL
+ArrayList<Integer> pattern = new ArrayList<Integer>();
+pattern.add(50);
+pattern.add(50);
+i.putIntegerArrayListExtra("flash_pattern", pattern);
+
+// Put sending application package name
+// REQUIRED
+i.putExtra("calling_application", getPackageName());
+
+// Send the broadcast
+sendBroadcast(i);
+</code></pre>
+
+<p>Link: <a href="https://github.com/pandanomic/FlashNotifier">https://github.com/pandanomic/FlashNotifier</a></p>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="SureWalk" class="anchor" href="#surewalk"><span class="octicon octicon-link"></span></a>SUREwalk</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>This is an app that I am currently developing with several other classmates on behalf of the SUREwalk student org. on campus. SUREwalk is a service offered by student government, where a student can call at late hours of the night and they will send two escorts to walk with them to wherever they are going. There are 3 components to the app: webapp, iOS app, and Android app, with our backend powered by Parse. I am working on the Android app portion of it with Guy Hawkins (<a href="https://github.com/GHawk1ns" class="user-mention">@GHawk1ns</a>), Chris Roberts (<a href="https://github.com/nasageek" class="user-mention">@nasageek</a>), and Sam Thompson (<a href="https://github.com/st028" class="user-mention">@st028</a>).
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+Due to some of the private nature of the backened functionality, the app is closed source. The planned release date however is January 2014. </p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <aside id="sidebar">
-
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
       </div>
     </div>
 
