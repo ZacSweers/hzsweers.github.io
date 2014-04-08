@@ -466,7 +466,7 @@ footer a:hover {
   #main-content h4:before,
   #main-content h5:before,
   #main-content h6:before {
-    content: none;
+    content: none;c
     padding-right: 0;
     margin-left: 0;
   }
@@ -477,3 +477,7 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
+
+.line-data{	/*this should fix the center aligned text*/	
+    text-align: left;
+}
