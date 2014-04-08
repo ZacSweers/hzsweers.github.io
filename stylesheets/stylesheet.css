@@ -466,7 +466,7 @@ footer a:hover {
   #main-content h4:before,
   #main-content h5:before,
   #main-content h6:before {
-    content: none;c
+    content: none;
     padding-right: 0;
     margin-left: 0;
   }
